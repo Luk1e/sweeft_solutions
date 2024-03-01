@@ -1,10 +1,24 @@
+package org.example.solutions;
+
 import java.util.List;
 
+/**
+ * Task2: Number of Happy Strings
+ * <p>
+ * This class provides a method to count the number of "happy strings" in a list of strings.
+ * A happy string is defined as a string in which no two consecutive characters are the same.
+ * <p>
+ * Time Complexity: O(n * m), where n is the number of strings and m is the length of the longest string
+ * Space Complexity: O(1)
+ */
 public class Task2 {
-/*
-   Time Complexity: O(n * m) where n is the input array length and m the largest strings length
-   Space Complexity: O(1)
-*/
+
+    /**
+     * Count the number of "happy strings" in a list of strings.
+     *
+     * @param strings The list of strings to analyze.
+     * @return The number of "happy strings" in the list.
+     */
     public static int numberOfHappyStrings(List<String> strings) {
         return (int) strings.stream()
                 .filter(str -> { // filter happy strings based on condition
